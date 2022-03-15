@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/', [ProjectController::class, 'getData']);
+Route::get('/', [ProjectController::class, 'getData'])->name('home');
+Route::get('/about', [ProjectController::class,'about'])->name('about');
